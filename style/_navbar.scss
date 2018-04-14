@@ -1,0 +1,146 @@
+// Styling for the navbar
+#mainNav {
+  padding-bottom: 15px;
+  border-bottom: none;
+  background: $primary;
+  @include sans-serif-font;
+  @include transition-all;
+  .navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $gray-900;
+    @include sans-serif-font;
+    &:focus,
+    &:hover {
+      color: $gray-900;
+    }
+  }
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    > li.nav-item {
+      > a.nav-link,
+      > a.nav-link:focus {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $gray-900;
+        @media (min-width: 992px) {
+          padding: 0.5rem 1rem;
+        }
+        &:hover {
+          color: $gray-900;
+        }
+        &.active {
+          color: $gray-900;
+        }
+      }
+    }
+  }
+}
+
+// Burger Menu
+.navbar-toggler {
+   cursor: pointer;
+   text-decoration: none;
+   &.active i {
+		&::before, &::after {
+			background: #FFF;
+		}
+  }
+  &.dark {
+  	&.active i {
+			&::before, &::after {
+				background: #FFF;
+			}
+	  }
+  }
+  &:hover, &:focus, &:active {
+  	outline: none;
+  	border-bottom: none!important;
+  }
+  i {
+  	position: relative;
+	  @include inline-block;
+	  width: 30px;
+	  height: 2px;
+	  color: #000;
+	  font:bold 14px/.4 Helvetica;
+	  text-transform: uppercase;
+	  text-indent:-55px;
+	  background: #000;
+	  transition: all .2s ease-out;
+	  .menu-show & {
+			background: #FFF;
+			color: #FFF;
+		}
+		 &::before, &::after {
+	  	content:'';
+		  width: 30px;
+		  height: 2px;
+		  background: #000;
+		  position: absolute;
+		  left:0;
+		  .menu-show & {
+				background: #FFF;
+			}
+		  @include transition(.2s);
+	  }
+  }
+  &.dark {
+  	i {
+	  	position: relative;
+		  color: #000;
+		  background: #000;
+		  transition: all .2s ease-out;
+			 &::before, &::after {
+			  background: #000;
+			  @include transition(.2s);
+		  }
+	  }
+  }
+}
+
+.navbar-toggler i::before {
+  top: -6px;
+}
+.navbar-toggler i::after {
+  bottom: -6px;
+}
+.navbar-toggler:hover i::before {
+  top: 0;
+  -webkit-transform: rotateZ(90deg);
+     -moz-transform: rotateZ(90deg);
+      -ms-transform: rotateZ(90deg);
+       -o-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+.navbar-toggler:hover i::after {
+  bottom: 0;
+  -webkit-transform: rotateZ(-90deg);
+     -moz-transform: rotateZ(-90deg);
+      -ms-transform: rotateZ(-90deg);
+       -o-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
+.navbar-toggler.active i {
+	background: transparent;
+}
+.navbar-toggler.active i::before {
+  top:0;
+  -webkit-transform: rotateZ(45deg);
+     -moz-transform: rotateZ(45deg);
+      -ms-transform: rotateZ(45deg);
+       -o-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+.navbar-toggler.active i::after {
+  bottom:0;
+  -webkit-transform: rotateZ(-45deg);
+     -moz-transform: rotateZ(-45deg);
+      -ms-transform: rotateZ(-45deg);
+       -o-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
