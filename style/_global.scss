@@ -7,6 +7,8 @@ html {
 
 body {
   @include sans-serif-font;
+  font-size: 1.4em;
+  line-height: 2em;
 }
 
 hr {
@@ -39,7 +41,27 @@ h6 {
 .bg-primary {
   background-color: $primary !important;
 }
-
+.bg-ceremony {
+  position: relative;
+  background: $primary;
+  min-height: 480px;
+}
+.gradient{
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.17) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(2%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,0.17)), color-stop(60%, rgba(236,239,230,0)), color-stop(92%, rgba(164,178,135,1)), color-stop(100%, rgba(160,175,130,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.17) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.17) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.17) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.17) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a0af82', GradientType=0 );
+}
 .bg-dark {
   background-color: $gray-900 !important;
 }
@@ -54,6 +76,7 @@ section {
 
 .section-heading {
   margin-top: 0;
+  font-size: 3rem;
 }
 
 ::-moz-selection {
