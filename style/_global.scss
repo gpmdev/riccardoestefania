@@ -9,6 +9,7 @@ body {
   @include sans-serif-font;
   font-size: 1.2rem;
   line-height: 1.8rem;
+  font-weight: 400;
 }
 
 hr {
@@ -37,6 +38,37 @@ h4,
 h5,
 h6 {
   @include serif-font;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+.section-heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+img::selection {
+  color: $white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: $white;
+  background: transparent;
 }
 
 .ceremony {
@@ -86,12 +118,12 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
-  background: -webkit-gradient(left bottom, left top, color-stop(0%, rgba(255,255,255,1)), color-stop(2%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,0.3)), color-stop(60%, rgba(236,239,230,0)), color-stop(92%, rgba(164,178,135,1)), color-stop(100%, rgba(160,175,130,1)));
-  background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
-  background: -o-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
-  background: -ms-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 30%, rgba(236,239,230,0) 70%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -webkit-gradient(left bottom, left top, color-stop(0%, rgba(255,255,255,1)), color-stop(2%, rgba(255,255,255,1)), color-stop(30%, rgba(255,255,255,0.3)), color-stop(70%, rgba(236,239,230,0)), color-stop(92%, rgba(164,178,135,1)), color-stop(100%, rgba(160,175,130,1)));
+  background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 30%, rgba(236,239,230,0) 70%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -o-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 30%, rgba(236,239,230,0) 70%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: -ms-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 30%, rgba(236,239,230,0) 70%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 30%, rgba(236,239,230,0) 70%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0af82', endColorstr='#ffffff', GradientType=0 );
 }
 a.text-image {
@@ -103,7 +135,6 @@ a.text-image {
     color: $white;
   }
 }
-
 
 .map {
   padding-bottom: 0;
@@ -150,10 +181,13 @@ a.text-image {
       box-shadow: none !important;
     }
   }
+  #googlemaps {
+    width: 100%;
+    min-height: 600px;
+    background: #fff;
+  }
+  .markers { visibility: hidden; display: none;}
 }
-
-
-
 
 .bg-dark {
   background-color: $gray-900 !important;
@@ -163,33 +197,50 @@ a.text-image {
   color: $white;
 }
 
-section {
-  padding: 3rem 0;
+.text-primary {
+  color: $primary !important;
 }
 
-.section-heading {
-  margin-top: 0;
-  font-size: 3rem;
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 300px;
+  @include sans-serif-font;
 }
 
-::-moz-selection {
-  color: $white;
-  background: $gray-900;
-  text-shadow: none;
+.btn-xl {
+  padding: 1rem 2rem;
 }
 
-::selection {
-  color: $white;
-  background: $gray-900;
-  text-shadow: none;
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  @include transition-all;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: $black !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: none !important;
+  }
 }
 
-img::selection {
-  color: $white;
-  background: transparent;
-}
-
-img::-moz-selection {
-  color: $white;
-  background: transparent;
+.btn-light {
+  background-color: $white;
+  border-color: $white;
+  @include transition-all;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: $black !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: none !important;
+  }
 }

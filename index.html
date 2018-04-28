@@ -8,29 +8,12 @@
 
     <title>Riccardo e Stefania - Il nostro Matrimonio</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="style/style.min.css" rel="stylesheet">
-
-    <style media="screen">
-    #googlemaps {
-      width: 100%;
-      height: 600px;
-      background: #EEE;
-    }
-    .markers { visibility: hidden; display: none;}
-    </style>
-
   </head>
 
   <body id="page-top">
@@ -88,8 +71,8 @@
             <h2 class="section-heading">La Cerimonia</h2>
             <hr class="my-4">
             <p class="mb-4">Cerimonia Religiosa <br /> <strong>Parrocchia Cuore Immacolato di Maria</strong> <br />
-              via Consolare Pompea, 121 - 98165 Messina.<br />
-            ore 17:00</p>
+              via Consolare Pompea, 121 - 98165 Messina.</p>
+            <h3>ore 17:00</h3>
             <a class="btn btn-light sr-button btn-xl js-scroll-trigger" href="#maps">Vai alla mappa</a>
           </div>
         </div>
@@ -104,8 +87,8 @@
             <h2 class="section-heading">Il Ricevimento</h2>
             <hr class="my-4 light">
             <a href="//www.granmircicatering.it/villa-ida/" title="Villa Ida - Gran Mirci" target="_blank" class="text-image">Villa Ida <img class="p-1 shadow" src="img/gran-mirci.png" width="auto" height="60" /></a>
-              <p class="mb-4">via Consolare Pompea, 2019 - 98165 Messina.<br />
-            ore 19:30</p>
+              <p class="mb-4">via Consolare Pompea, 2019 - 98165 Messina.</p>
+              <h3>ore 20:00</h3>
             <a class="btn btn-light sr-button btn-xl js-scroll-trigger" href="#maps">Vai alla mappa</a>
           </div>
         </div>
@@ -116,9 +99,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">La Lista Nozze</h2>
+            <h2 class="section-heading">Lista Nozze</h2>
             <hr class="my-4">
-            <p class="mb-4">Cari parenti ed amici <br /> la vostra presenza ci rende felici <br /> se poi vien voglia, chiss&agrave;, di strafare <br /> un aiuto &egrave; gradito per farci viaggiare.</p>
+            <p class="mb-4">Cari parenti ed amici <br /> la vostra presenza ci rende felici, <br /> se poi vien voglia, chiss&agrave;, di strafare <br /> un aiuto &egrave; gradito per farci viaggiare.</p>
               <button class="btn btn-primary sr-button btn-xl js-scroll-trigger" data-toggle="modal" data-target="#gift_modal">Clicca qui</button>
           </div>
         </div>
@@ -130,18 +113,24 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Titolazione</h5>
+            <h5 class="modal-title">Regalo di nozze</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <h3>Regalo di nozze</h3>
-            <p>IBAN: IT95J0200816511000103609870</p>
-            <p>intestato a: Riccardo Dollenz</p>
+          <div class="modal-body text-center">
+            <h3>"La vita è un viaggio e chi viaggia vive due volte"</h3>
+            <p class="mb-3">(Omar Khayyam)</p>
+            <img src="img/gift-modal.jpg" width="auto" height="150" alt="Riccardo e Stefania"/>
+            <p class="mb-4">Il nostro "<em>viaggio</em> sta per avere inzio e sar&agrave; di certo meraviglioso perch&egrave; ognuno di voi avr&agrave; voluto segnare ogni singolo chilometro che percorreremo. <br />
+            Grazie di cuore!</p>
+            <hr />
+            <p class="mb-3">IBAN: IT95J0200816511000103609870</p>
+            <p class="mb-3">Codice BIC Swift: UNCRITM1K66</p>
+            <p class="mb-3">intestato a: Riccardo Dollenz</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Torna al sito</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Chiudi</button>
           </div>
         </div>
       </div>
@@ -179,7 +168,9 @@
     </section>
 
     <section class="map">
-      <div class="googlemaps" id="googlemaps"></div>
+      <div class="googlemaps" id="googlemaps">
+        <p>Qualcosa &egrave; andato storto nel caricamento della mappa!</p>
+      </div>
       <ul class="markers">
         <li data-latlng="38.226138, 15.567622" data-icon="img/pin-church.png|32|32" data-iconshape="[3,12,21,3,34,4,51,7,44,24,34,30,13,29,3,26]">
           <div class="infoWindow">
@@ -196,20 +187,13 @@
       </ul>
     </section>
 
-
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="//maps.google.com/maps/api/js?key=AIzaSyCfU6SSE2J2asi8tzHmtcywnhensolthig&callback=initMap"></script>
   	<script src="vendor/googlemaps/googlemaps-3.0.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 
