@@ -52,6 +52,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#gifts">LISTA NOZZE</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#maps">MAPPA</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -100,8 +103,8 @@
           <div class="col-lg-6 mx-auto text-center">
             <h2 class="section-heading">Il Ricevimento</h2>
             <hr class="my-4 light">
-            <p class="mb-4"><strong>Villa Ida - Gran Mirci</strong> <br />
-              via Consolare Pompea, 2019 - 98165 Messina.<br />
+            <a href="//www.granmircicatering.it/villa-ida/" title="Villa Ida - Gran Mirci" target="_blank" class="text-image">Villa Ida <img class="p-1 shadow" src="img/gran-mirci.png" width="auto" height="60" /></a>
+              <p class="mb-4">via Consolare Pompea, 2019 - 98165 Messina.<br />
             ore 19:30</p>
             <a class="btn btn-light sr-button btn-xl js-scroll-trigger" href="#maps">Vai alla mappa</a>
           </div>
@@ -116,11 +119,35 @@
             <h2 class="section-heading">La Lista Nozze</h2>
             <hr class="my-4">
             <p class="mb-4">Cari parenti ed amici <br /> la vostra presenza ci rende felici <br /> se poi vien voglia, chiss&agrave;, di strafare <br /> un aiuto &egrave; gradito per farci viaggiare.</p>
-              <a class="btn btn-primary sr-button btn-xl js-scroll-trigger" href="#modale">Clicca qui</a>
+              <button class="btn btn-primary sr-button btn-xl js-scroll-trigger" data-toggle="modal" data-target="#gift_modal">Clicca qui</button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="gift_modal" tabindex="-1" role="dialog" aria-labelledby="gift_modal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Titolazione</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Regalo di nozze</h3>
+            <p>IBAN: IT95J0200816511000103609870</p>
+            <p>intestato a: Riccardo Dollenz</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Torna al sito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <section id="maps">
       <div class="container">
@@ -128,47 +155,47 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Come raggiungere le locations</h2>
             <hr class="my-4">
-            <div class="googlemaps" id="googlemaps"></div>
-            <ul class="markers">
-              <li data-latlng="38.226138, 15.567622" data-icon="img/pin-church.png|32|32" data-iconshape="[3,12,21,3,34,4,51,7,44,24,34,30,13,29,3,26]">
-                <div class="infoWindow">
-                  <h4>La Chiesa</h4>
-                  <p>Parrocchia Cuore Immacolato Di Maria</p>
-                  <p>Indirizzo: Via Consolare Pompea, 121 - 98165 Messina</p>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 text-center">
+                <div class="mt-5 mx-auto">
+                  <img src="img/pin-church.png" class="sr-icons p-3" />
+                  <h3 class="mb-4">La Cerimonia</h3>
+                  <h4 class="mb-3">Parrocchia Cuore Immacolato Di Maria</h4>
+                  <h5 class="mb-4">Via Consolare Pompea, 121 - 98165 Messina</h5>
                 </div>
-              </li>
-              <li data-latlng="38.26533999999999, 15.62912499999993" data-icon="img/pin-wedding.png|32|32" data-iconshape="[3,12,21,3,34,4,51,7,44,24,34,30,13,29,3,26]">
-                <div class="infoWindow">
-                  <h4>Il ricevimento</h4>
-                  <p>Villa Ida - Gran Mirci</p>
-                  <p>Indirizzo: Via Consolare Pompea, 2019 - 98165 Messina</p>
+              </div>
+              <div class="col-lg-6 col-md-6 text-center">
+                <div class="mt-5 mx-auto">
+                  <img src="img/pin-wedding.png" class="sr-icons p-3" />
+                  <h3 class="mb-4">Il Ricevimento</h3>
+                  <h4 class="mb-3">Villa Ida - Gran Mirci</h4>
+                  <h5 class="mb-4">Via Consolare Pompea, 2019 - 98165 Messina</h5>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 text-center">
-            <div class="mt-5 mx-auto">
-              <i class="fa fa-4x fa-map-marker text-primary mb-3 sr-icons"></i>
-              <h3>La Cerimonia</h3>
-              <h4 class="mb-3">Parrocchia Cuore Immacolato Di Maria</h4>
-              <h5 class="mb-3">Via Consolare Pompea, 121 - 98165 Messina</h5>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 text-center">
-            <div class="mt-5 mx-auto">
-              <i class="fa fa-4x fa-map-marker text-primary mb-3 sr-icons"></i>
-              <h3>Il Ricevimento</h3>
-              <h4 class="mb-3">Villa Ida - Gran Mirci</h4>
-              <h5 class="mb-3">Via Consolare Pompea, 2019 - 98165 Messina</h5>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="map">
+      <div class="googlemaps" id="googlemaps"></div>
+      <ul class="markers">
+        <li data-latlng="38.226138, 15.567622" data-icon="img/pin-church.png|32|32" data-iconshape="[3,12,21,3,34,4,51,7,44,24,34,30,13,29,3,26]">
+          <div class="infoWindow">
+            <p>Parrocchia Cuore Immacolato Di Maria</p>
+            <p>Indirizzo: Via Consolare Pompea, 121 - 98165 Messina</p>
+          </div>
+        </li>
+        <li data-latlng="38.26533999999999, 15.62912499999993" data-icon="img/pin-wedding.png|32|32" data-iconshape="[3,12,21,3,34,4,51,7,44,24,34,30,13,29,3,26]">
+          <div class="infoWindow">
+            <p>Villa Ida - Gran Mirci</p>
+            <p>Indirizzo: Via Consolare Pompea, 2019 - 98165 Messina</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

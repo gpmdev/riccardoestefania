@@ -94,6 +94,67 @@ h6 {
   background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.3) 50%, rgba(236,239,230,0) 60%, rgba(164,178,135,1) 92%, rgba(160,175,130,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0af82', endColorstr='#ffffff', GradientType=0 );
 }
+a.text-image {
+  @include serif-font;
+  font-size: 2rem;
+  color: $white;
+  &:active,
+  &:hover {
+    color: $white;
+  }
+}
+
+
+.map {
+  padding-bottom: 0;
+  text-align: center;
+  *:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .gm-style .gm-style-iw {
+    padding: 10px;
+    text-align: center;
+  }
+  .map-info-title {
+    margin-bottom: 5px;
+    @include sans-serif-font;
+  }
+  .infoWindow {
+    text-align: center;
+    @include sans-serif-font;
+    padding: 25px inherit;
+  }
+  input[type="text"]{
+    border-radius: 300px;
+    border: 2px solid $primary;
+    padding: .5rem;
+  }
+  .map-btn a, input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+    border-radius: 300px;
+    padding: .5rem 2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    @include transition-all;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $black !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+
+
+
 .bg-dark {
   background-color: $gray-900 !important;
 }

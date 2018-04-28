@@ -953,9 +953,9 @@ GoogleMaps.prototype.Marker = function( map, latlng, markerOptions )
 
 		// directions form html
 		directions_el.innerHTML = '<form action="" method="get">	\
-			<a href="#" class="from" style="font-weight:bold;">'+ map.DIRECTIONS_FROM +'</a> &nbsp; 	\
+			<!-- <a href="#" class="from" style="font-weight:bold;">'+ map.DIRECTIONS_FROM +'</a> &nbsp; 	\
 			<a href="#" class="to">'+ map.DIRECTIONS_TO +'</a><br /><br />	\
-			<input type="text" name="saddr" size="30" value="" /><br />	\
+			--><p class="map-info-title">Inserisci l\'indirizzo di partenza</p><input type="text" name="saddr" size="30" value="" /><br />	\
 			<input type="hidden" name="daddr" value="'+ latlng.toUrlValue() +'" />	\
 			<input type="submit" name="getDirections" value="'+ map.DIRECTIONS_BUTTON +'" />	\
 		</form>';
@@ -1067,14 +1067,13 @@ GoogleMaps.prototype.Marker = function( map, latlng, markerOptions )
 		if(infoWindow_data.options.directions || infoWindow_data.options.streetview)
 		{
 			directions_streetview_links = document.createElement('div');
-			directions_streetview_links.style.paddingTop = '10px';
+			directions_streetview_links.setAttribute("class", "map-btn");
 
 			if(infoWindow_data.options.directions)
 			{
 				var a = document.createElement('a');
 				a.setAttribute('href', '#directions');
 				a.innerHTML = map.DIRECTIONS_LINK;
-				a.style.marginRight = '7px';
 
 				a.onclick = function()
 				{
