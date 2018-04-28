@@ -1,8 +1,8 @@
 // Mixins
 @mixin transition-all() {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
 @mixin transition($transition) {
     -moz-transition:    all $transition ease;
@@ -22,6 +22,12 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@mixin background-contain() {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 @mixin serif-font() {
   font-family: 'Great Vibes', cursive;

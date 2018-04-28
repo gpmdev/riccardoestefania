@@ -8,7 +8,7 @@
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top - 57)
+          scrollTop: (target.offset().top - 150)
         }, 1000, "easeInOutExpo");
         return false;
       }
@@ -50,11 +50,6 @@
     duration: 1000,
     delay: 200
   });
-  sr.reveal('.sr-contact', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 300);
 
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
@@ -73,6 +68,9 @@
   });
 
 })(jQuery); // End of use strict
+
+
+
 
 /* Googlemaps */
 
