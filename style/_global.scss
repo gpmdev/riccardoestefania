@@ -77,7 +77,6 @@ img::-moz-selection {
   min-height: 480px;
 }
 .banqueting {
-  background-color: $white;
   background-image: url('../img/villa-ida.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -86,7 +85,6 @@ img::-moz-selection {
   min-height: 480px;
 }
 .gift {
-  background-color: $white;
   background-image: url('../img/gift.jpg');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -166,7 +164,7 @@ a.text-image {
     display: block;
     width: 100%;
     background-color: $primary;
-    border-color: $primary;
+    border-color: transparent;
     color: $white;
     border-radius: 300px;
     padding: .5rem 2rem;
@@ -177,8 +175,9 @@ a.text-image {
     &:focus,
     &:active {
       color: $white;
-      background-color: $black !important;
+      background-color: $black;
       box-shadow: none !important;
+      border-color: transparent;
     }
   }
   #googlemaps {
@@ -221,7 +220,7 @@ a.text-image {
   &:focus,
   &:active {
     color: $white;
-    background-color: $black !important;
+    background-color: $black;
   }
   &:active,
   &:focus {
@@ -237,7 +236,7 @@ a.text-image {
   &:focus,
   &:active {
     color: $white;
-    background-color: $black !important;
+    background-color: $black;
   }
   &:active,
   &:focus {

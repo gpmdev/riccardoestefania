@@ -1,13 +1,19 @@
 // Styling for the masthead
 header.masthead {
   position: relative;
-  height: calc(100vh - 40px);
-  min-height: 480px;
+  height: calc(100vh - 20px);
   padding-bottom: 1rem;
   padding-top: 1rem;
   background-image: url('../img/header.jpg');
+  background-repeat: no-repeat;
   background-position: bottom center;
   @include background-cover;
+  @media (min-width: 992px) and (max-height: 900px) {
+    height: calc(100vh + 100px);
+  }
+  @media (min-width: 1440px) and (max-height: 768px) {
+  height: calc(100vh + 250px);
+  }
   hr {
     margin-top: 30px;
     margin-bottom: 30px;
